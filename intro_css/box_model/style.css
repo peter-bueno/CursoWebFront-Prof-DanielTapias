@@ -3,43 +3,54 @@ body{
 }
 
 p{
-    background-color: #ffb27f;
-    padding: 0px 35px 25px 35px;
+    background-color: #5c5c5c;
 }
 
 h1{
     background-color: #15ff00;
-    /*padding: 16px; Define 16pixels aos 4 lados interno de um elemento html*/
     
-    /*podemos definir padding top, right, bottom e left individualmente
-    padding-top: 34px;
-    padding-right: 34px;
-    padding-bottom: 34px;
-    padding-left: 34px;*/
-
-    /*Podemos resumir a declaração tudo na mesma linha:*/
-           /* TOP>RIGHT>BOTTOM>LEFT */     
-    padding : 50px 24px 34px 20px;
 }
 
 h2{
     background-color: #3c39fd;
-    width: 50%;
-    height: 50%;
-    /*margin: 16px;Define 16pixels aos 4 lados externos de um elemento html*/
+    margin-top: 60px;
     
-    /*podemos definir margin top, right, bottom e left individualmente , mas nesse caso nos retorna o mesmo resultado do ex. acima
-    margin-top: 22px;
-    margin-right: 22px;
-    margin-bottom: 22px;
-    margin-left: 22px;*/
-    
-        /* TOP>RIGHT>BOTTOM>LEFT */
-    margin: 34px 23px 40px;
-    /*Nesse exemplo, o valor declarado em um unico lado, será replicado para o lado espelho,
-    Por exemplo, nesse caso o 23px(right) será passado ao (left).
-    Resultando em '34px 23px 40px 23px'   */
+}
 
-    /*O mesmo aconteceria se fizessemos algo como: 
-    margin: 34px(top e bottom) 23px;(right e left) */ 
+.destaque {
+    background-color: #ff0000;
+}
+.tamanho {
+    width: 50%;
+    height: 200px;
+}
+.espaco-interno {
+    padding: 30px;
+}
+
+.espaco-externo {
+    margin: 50px 0 20px 15px;
+}
+
+/*Trabalhando com Border*/
+/*Bordas tem width, style e cor*/
+/*Podemos definir essas 3 propriedades na mesma linha:*/
+.borda {
+    /*a propriedade border-style tem varios estilos alem do dotted*/
+    /*Os mais conhecidos são:
+    none - que é o padrao
+    hidden - é quase o mesmo de none, exceto qnd trabalhamos com imagem de fundo.
+    dotted - borda pontilhada
+    dashed - que são tracejados
+    solid - borda solida
+    double - borda dupla
+    groove - estilo especial
+    ridge - estilo especial
+    inset - estilo especial
+    outset - estilo especial
+     */
+     
+     /*Podemos definir cores, estilos e espessuras,
+      independentes como nas outras propriedades do box model*/
+    border: 12px dotted white;
 }
