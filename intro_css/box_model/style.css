@@ -52,5 +52,13 @@ h2{
      
      /*Podemos definir cores, estilos e espessuras,
       independentes como nas outras propriedades do box model*/
-    border: 12px dotted white;
+    border: 12px dotted #ffffff;
+    border-top: 20px dashed #15ff00 ;
+    border-top-width: 76px;
+}
+
+/*A unica diferença para o border, é que o outline cria uma borda pra fora do elemento.
+Enquanto que o border, cria a borda pra dentro do elemento.*/
+.outline {
+    outline: 15px dashed #008000;
 }
