@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proriedade Display</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*Por padrão h1 e p são display block, então o elementos seguintes sempre ficaram abaixo dele*/
+        /*Porem se alterarmos seu width, continua um elemento embaixo do outro,
+        por causa da quebra de linha padrão.*/
+        h1 {
+            border: 1px solid #ff0000;
+            /*Testando quebra de linha*/
+            width: 30%;
+        }
+
+        p {
+            width: 50%;
+            background-color: #faebd7;
+        }
+
+        a {
+            background: #ff8686;
+            /*Elementos em linha, não recebem as propriedades do box-model.
+            width: 750px;
+            height: 2000px;
+            Aqui nada é alterado. */
+
+            /*Podemos alterar a margin de elementos inline apenas na horizontal
+            margin: 30px;*/
+
+            /*Nunca utilizar padding em elementos inline,
+             seu comportamento fica imprevisivel e estranho */
+             padding: 15px;
+             /*Aqui o background da tag <a> fica emcima da linha de cima, no texto e embaixo da linha abaixo.*/
+            
+            display: inline-block;
+        }
+
+        strong {
+            /*Aqui aconteçe o mesmo que ocorreu na tag <a>, strong tb é inline
+            padding: 15px;*/
+            background-color: #ff8686;
+            /*Agora alteramos o seu display para block
+            display: block;*/
+
+            /*Agora alteramos para inline-block,
+            que vai permitir utilizarmos as propriedades do box-model,
+            porem nosso elemento, continua sendo tratado como elemento de linha*/
+            display: inline-block;
+            /*Aqui os elementos <strong> ocupam 50% do container do elemento pai,
+             no caso o <p>. E ainda continua sendo tratado como um elemento inline*/
+            width: 50%;
+        }
+        i {
+            /*Com a propriedade display: none, removemos aquele elemento
+            Agora, com a propriedade  visibility: hidden,
+            O espaço daquele elemento continua, porem seu conteudo fica invisivel.*/
+            background: #ff0008;
+            /*Espaço do elemento aparece, MAS seu conteudo NÃO.*/
+            /*a propriedade visibility por padrão é 'visible'. */
+            visibility: hidden;
+            /*Ou seja, para remover elemento usamos display:none;
+             E pra esconder o conteudo de um elemento, usamos visibility: hidden; */
+        }
+
+    </style>
+</head>
+<body>
+        <h1>Display</h1>
+        <!--Ja dentro do paragrafo temos tags inline, que não alteram a estrutura do texto padrão,
+         pois não adicionam quebra de linha. Como no exemplo abaixo: -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             <a href="box_model/box_sizing.html">Box Sizing</a> Qui placeat perferendis beatae corrupti possimus vel eveniet provident ut.
+              Libero modi praesentium dolorem aliquid et totam.
+               <b>Texto em negrito com a tag &ltb&gt </b>  Recusandae, eos?
+               <em>texto em italico com &ltem&gt</em> <i>texto em italico com &lti&gt</i>
+                <strong>Texto em negrito com a tag &ltstrong&gt </strong>Aliquam aut aperiam possimus, quod quam repellat ab mollitia. Ut pariatur in cupiditate molestias placeat exercitationem nulla id doloribus, nobis sunt ratione hic sed aliquid ullam neque consequuntur maxime dolore beatae saepe unde. Cupiditate, pariatur? Mollitia repellat labore sunt! Laboriosam labore quas aspernatur voluptates incidunt officia eaque esse non, repudiandae molestias asperiores aut fuga neque rerum blanditiis ea omnis error cumque assumenda praesentium veniam fugit maiores cupiditate.
+              Numquam dicta atque quia expedita beatae.</p>
+    
+</body>
+</html>
