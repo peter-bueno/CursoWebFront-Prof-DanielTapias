@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Classes em Links</title>
+    
+
+    <style>
+        /*Pseudo-classes são uma forma de alterar as propriedades css de um elemento,
+        sem precisarmos usar um id, classe ou o nome da tag(a).
+        Ao inves disso, utilizamos os estados da tag , alguns exemplos são:
+        a:link{} - a:visited{} - a:hover{} - a:active{}
+        */
+        h1, a, p {
+            font-family: sans-serif;
+        }
+
+        
+        /*seleciona somente os links que não foram visitados:*/
+        a:link {
+            color: #210af5;
+        }
+
+        /*seleciona somente os links que  foram visitados:*/
+        a:visited {
+            color: #ff3131;
+        }
+
+        a:active {
+            background-color: #f50a0a;
+            border-radius: 999px;
+            border: 2px solid #f57c0a;
+        }
+        a:hover {
+            color: #020202;
+            border: 2px solid #6b4aff;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: all 100ms ease-in-out;
+            text-align: center;
+            padding: 3px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Pseudo Classes em Links</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi quam perspiciatis incidunt sunt impedit eligendi accusamus exercitationem quae, corrupti atque veritatis adipisci, veniam praesentium facere ipsum sit assumenda minima consectetur. Mollitia eos cumque illum ex, natus, quisquam necessitatibus quaerat facere quis aliquam velit quam similique, eum ratione reprehenderit aspernatur.<a href="box_model/margin_auto.html">Link Margin Auto</a></p>
+    Link teste: <a href="dshadouiasdh.html">Teste-Me</a>
+</body>
+</html>
