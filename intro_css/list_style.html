@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>List Style</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        /*Formatando margin top das listas*/
+        ul, ol {
+            margin-top: 0px;
+        }
+
+        /*Formatando li's da ul*/
+        ul  li {
+            /*Valores mais utilizados para list-style-type
+            em ul's são:
+            - disc: é o circulo preto, padrão
+            - circle: circulo furado
+            - square: quadrados */
+            list-style-type: square;
+
+            /*list-style-position - serve para alterar
+             a posição dos itens da lista:
+            - outside: é o  padrão
+            - inside: posiciona mais a direita os itens*/
+
+            /*list-style-type: none; 
+            Serve pra esconder o bullet*/
+            list-style: none inside;
+
+            
+        }
+
+        /*As ol's tem suas proprias propriedades também: */
+
+        ol li {
+            /*podemos utilizar letras, tanto maiuscula, quanto
+            minuscula. temos o upper-alpha e o upper-latin.
+            Que funcionam iguais.
+            list-style-type: lower-alpha;*/
+            list-style-type: upper-latin;
+            
+            /*Podemos utilizar numeros romanos, upper e lower também.*/
+            list-style-type: upper-roman;
+
+            /*Podemos tbm, resumir valores dentro de uma unica
+            propriedade: */
+            list-style: upper-roman inside;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>List Style</h1>
+
+
+
+    <h2>Lista Não Ordenada</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h2>Lista Ordenada</h2>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+
+</body>
+</html>
