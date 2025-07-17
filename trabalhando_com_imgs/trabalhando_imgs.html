@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <style>
+        /*Quando utilizarmos background-image: url(...).
+        Não devemos utilizar espaço apos 'url', senão o css não vai reconhecer. */
+    
+        /*Atributo alt="" de img, é obrigatorio em toda imagem para acessibilidade
+         e boas praticas. */
+
+    .logo-img {
+        width: 200px;
+
+        /*Para visualizar transparencia dos formatos transparentes:*/
+        background-color: black;
+        
+    }
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: #000094c9;
+        border-bottom: 2px solid #000094c9 ;
+        padding-bottom: 10px;
+    }
+    body {
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 800px;
+        margin: auto;
+
+         /*Utilizando bg-image do css*/
+        background-image: url(imgs/bg.jpg);
+        /*propriedade repeat é o padrão, que faz a imgm se repitir para ocupar aquele espaço do elemento pai
+        background-repeat: repeat;*/
+
+        /*Temos tbm o no-repeat:*/
+        background-repeat: no-repeat;
+
+        /*As dimensoes tbm: tamanho | altura   
+        background-size: 500px 700px;
+        */
+        background-attachment: fixed;
+        background-size: 100%;
+
+        /*Com o bg-position podemos controlar que parte queremos que seja sempre visivel
+        do nosso bg-img, no ex abaixo, sempre mostramos as arvores.
+        Independente do tamanho da nossa pagina.
+        Utilizando juntamente com bg-size: cover */
+        background-position: right bottom;
+
+        /*background-size: contain;*/
+        background-size: cover;
+
+    }
+
+    .logo-css {
+        float: right;
+    }
+
+    
+    .logo-html {
+        float: left;
+    }
+
+    p {
+        /*line-height define o espaçamento de altura das linhas*/
+        line-height: 1.1;
+        /*justify para formatar os espaçamentos das palavras adequadamente. */
+        text-align: justify;
+    }
+
+    
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando Com imagens</h1>
+    
+    <h2>Vetoriais vs Bitmap</h2>
+
+    <h4>Imagem BITMAP:</h4>
+    <img class="logo-img" src="imgs/logo_ser-frontend-ico.png" alt="logo serfrontend PNG">
+    <br>
+    <h4>Imagem VETORIAL:</h4>
+    <img class="logo-img" src="imgs/logo_ser-frontend-ico.svg" alt="logo serfrontend SVG">
+    
+
+    <h2>Imagens transparentes</h2>
+    <h4>.GIF:</h4>
+    <img class="logo-img" src="imgs/logo_ser-frontend-ico-transparente.gif" alt="logo serfrontend GIF">
+    
+    <h4>.PNG</h4>
+    <img class="logo-img" src="imgs/logo_ser-frontend-ico-transparente.png" alt="logo serfrontend PNG">
+
+
+    <h2>GIF Animado</h2>
+    <img class="logo-img" src="imgs/walk.gif" alt="Animação mulher andando">
+    
+    <h2>Float Images</h2>
+    <img class="logo-html" src="imgs/html5.png" alt="html5 logo">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque debitis velit delectus nobis distinctio, accusantium nisi! Tempora rem eaque quo magnam nisi perspiciatis. Maiores debitis saepe deserunt enim rem voluptate, fugit iusto consequatur explicabo possimus excepturi doloremque blanditiis deleniti inventore natus, magnam commodi in molestiae! Ea tenetur tempore praesentium quas? Rem aperiam tempora debitis iure, alias facere, nisi placeat quos ipsam molestias temporibus illum delectus laborum qui error incidunt magnam, neque veniam explicabo. Voluptate distinctio, nam magni quas incidunt ex saepe possimus totam a sint maiores dignissimos ut exercitationem perferendis mollitia voluptatum delectus veniam quod temporibus quaerat error. Doloremque, consequuntur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non tempora provident nesciunt repellat quo eius vero, ex harum! Aliquam adipisci esse obcaecati in nam, repudiandae deleniti aut omnis eaque quasi nisi nostrum. Exercitationem rem, et, iure provident adipisci qui voluptas nulla inventore aliquam sed placeat, amet aliquid libero dolor eum!</p>
+
+    <img class="logo-css" src="imgs/css3.png" alt="Css3 logo">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque debitis velit delectus nobis distinctio, accusantium nisi! Tempora rem eaque quo magnam nisi perspiciatis. Maiores debitis saepe deserunt enim rem voluptate, fugit iusto consequatur explicabo possimus excepturi doloremque blanditiis deleniti inventore natus, magnam commodi in molestiae! Ea tenetur tempore praesentium quas? Rem aperiam tempora debitis iure, alias facere, nisi placeat quos ipsam molestias temporibus illum delectus laborum qui error incidunt magnam, neque veniam explicabo. Voluptate distinctio, nam magni quas incidunt ex saepe possimus totam a sint maiores dignissimos ut exercitationem perferendis mollitia voluptatum delectus veniam quod temporibus quaerat error. Doloremque, consequuntur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non tempora provident nesciunt repellat quo eius vero, ex harum! Aliquam adipisci esse obcaecati in nam, repudiandae deleniti aut omnis eaque quasi nisi nostrum. Exercitationem rem, et, iure provident adipisci qui voluptas nulla inventore aliquam sed placeat, amet aliquid libero dolor eum!</p>
+
+
+</body>
+</html>
